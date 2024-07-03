@@ -1,0 +1,62 @@
+curl -X POST 'https://api.instill.tech/v1beta/users/chunhao094/pipelines/automatic-key/trigger' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <api_token>' \
+--data  '{
+	"inputs": [
+		{
+			"image": "your image base64 encoded string"
+		}
+	]
+}'
+
+
+Sample output
+{
+  "outputs": [
+    {
+      "result": [
+        {
+          "bounding-box": {
+            "height": 202,
+            "left": 695,
+            "top": 494,
+            "width": 164
+          },
+          "category": "person",
+          "score": 0.7942749857902527
+        },
+        {
+          "bounding-box": {
+            "height": 1220,
+            "left": 1,
+            "top": 213,
+            "width": 179
+          },
+          "category": "person",
+          "score": 0.7330120801925659
+        },
+        {
+          "bounding-box": {
+            "height": 293,
+            "left": 139,
+            "top": 910,
+            "width": 230
+          },
+          "category": "person",
+          "score": 0.7247175574302673
+        },
+        {
+          "bounding-box": {
+            "height": 1409,
+            "left": 22,
+            "top": 62,
+            "width": 1053
+          },
+          "category": "book",
+          "score": 0.5411786437034607
+        }
+      ]
+    }
+  ],
+  "metadata": null
+}
