@@ -3,8 +3,7 @@ import requests
 import base64
 import json
 
-# api_token = " "
-api_token = st.text_input("Instill AI API token", type="password")
+api_token = st.text_input("Instill AI API token", type="password", value=st.secrets["INSTILL_CLOUD_API_TOKEN"])
 url = 'https://api.instill.tech/v1beta/users/chunhao094/pipelines/automatic-key/trigger'
 
 def image_to_base64(image):
