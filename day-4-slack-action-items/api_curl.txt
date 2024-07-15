@@ -1,0 +1,27 @@
+read message
+Copy
+curl -X POST 'https://api.instill.tech/v1beta/users/chunhao094/pipelines/slack-message-reader/trigger' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <api_token>' \
+--data  '{
+	"inputs": [
+		{
+			"channel_name": "Please put your value here",
+			"date": "Please put your value here"
+		}
+	]
+}'
+
+
+send message
+curl -X POST 'https://api.instill.tech/v1beta/users/chunhao094/pipelines/slack-message-sender/trigger' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <api_token>' \
+--data  '{
+	"inputs": [
+		{
+			"channel_name": "Please put your value here",
+			"message": "Please put your value here"
+		}
+	]
+}'
